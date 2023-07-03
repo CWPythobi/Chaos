@@ -1,6 +1,14 @@
 #
 # wm independent hotkeys
 
+# Hide/Show Bar (Polybar and/or eww)
+# super + {h,u}
+# 	HideBar {-h,-u}
+super + h
+	polybar-msg cmd hide | bspc config top_padding 2
+super + u
+	polybar-msg cmd show | bspc config top_padding 31
+
 # Random wallpaper
 super + alt + w
 	feh -z --no-fehbg --bg-fill ~/Images/wall/
@@ -38,6 +46,10 @@ super + g
 super + shift + w
 	firefox
 
+# Bravre
+super + b
+	brave
+
 # Chromium
 super + w
 	chromium
@@ -45,6 +57,9 @@ super + w
 # terminal emulator
 super + Return
 	alacritty
+
+# super + x 
+#     alacritty, bsp node -a windowsize 200x300
 
 # program launcher
 super + d
